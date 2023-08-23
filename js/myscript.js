@@ -8,16 +8,16 @@ L'output del prezzo finale va stampato in forma umana (ovvero con massimo due de
 //il numero di chilometri che vuole percorrere
 const km = Number(prompt('Quanti Chilometri devi percorrere?'));
 console.log ('I chilometri da percorrere sono:'+ km);
-if (km != (Number)){
-alert("Ops, ripeti la procedura inserendo per favore i km che percorrerai");
-}
+
 
 //l'età del passeggero
 const age = Number(prompt("Quale è la tua età?")); 
 console.log("La tua età è:" + age);
-if (age != (Number)){
-    alert("Ops, ripeti la procedura inserendo per favore la tua età ");
-}
+
+
+if (isNaN(km) && isNaN(age)) {
+    alert("devi scrivere una cifra numerica");
+  }
 //il prezzo del biglietto è definito in base ai km (0.21 € al km)
 const ticketPrice = km * 0.21;
 console.log("Il costo del biglietto è:€" + ticketPrice)
@@ -27,13 +27,13 @@ console.log("Il costo del biglietto è:€" + ticketPrice)
 let total 
 //va applicato uno sconto del 20% per i minorenni
 if(age <= 18 ) {
-    let = discount20 = ticketPrice * (20 % 100);
-    total = discount20 - ticketPrice;
+    let = discount20 = ticketPrice * (20 / 100);
+    total = ticketPrice - discount20;
 }
 //va applicato uno sconto del 40% per gli over 65.
 else if (age >= 65) {
-    let = discount65 = ticketPrice * (40 % 100);
-    total = discount65 - ticketPrice;
+    let = discount65 = ticketPrice * (40 / 100);
+    total = ticketPrice - discount65;
 }
 
 else {
