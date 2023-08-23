@@ -15,9 +15,14 @@ const age = Number(prompt("Quale è la tua età?"));
 console.log("La tua età è:" + age);
 
 
-if (isNaN(km) && isNaN(age)) {
+if (isNaN(km) || isNaN(age)) {
     alert("devi scrivere una cifra numerica");
+    location.reload();
   }
+
+
+
+
 //il prezzo del biglietto è definito in base ai km (0.21 € al km)
 const ticketPrice = km * 0.21;
 console.log("Il costo del biglietto è:€" + ticketPrice)
